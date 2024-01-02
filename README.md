@@ -1,3 +1,3 @@
 <!-- @format -->
 
-[Javascript](https://github.com/hatbann/2024_study/js)
+[Javascript](https://github.com/hatbann/2024_study/tree/main/js)

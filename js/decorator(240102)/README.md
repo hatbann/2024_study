@@ -36,6 +36,6 @@ $ npm i -D @babel/cli @babel/node @babel/core @babel/plugin-proposal-decorators 
 
 ### 종류
 
-1. Class Method decorator(https://github.com/hatbann/2024_study/js/decorator(240102)/classMethodDecorator)
-2. Class Property(멤버변수) decorator(https://github.com/hatbann/2024_study/js/decorator(240102)/classPropertyDecorator)
-3. Class decorator(https://github.com/hatbann/2024_study/js/decorator(240102)/classDecorator)
+1. [Class Method decorator](<https://github.com/hatbann/2024_study/tree/main/js/decorator(240102)/classMethodDecorator>)
+2. [Class Property(멤버변수) decorator](<https://github.com/hatbann/2024_study/tree/main/js/decorator(240102)/classPropertyDecorator>)
+3. [Class decorator](<https://github.com/hatbann/2024_study/tree/main/js/decorator(240102)/classDecorator>)
