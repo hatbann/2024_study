@@ -1,0 +1,70 @@
+/** @format */
+
+.sortable-list {
+  width: 425px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 7px;
+  padding: 30px 25px 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+.sortable-list .item {
+  list-style: none;
+  display: flex;
+  cursor: move;
+  background: #fff;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px 13px;
+  margin-bottom: 11px;
+  border: 1px solid #ccc;
+  justify-content: space-between;
+}
+.item .details {
+  display: flex;
+  align-items: center;
+}
+
+.item .details span {
+  font-size: 1.13rem;
+}
+.item i {
+  color: #474747;
+  font-size: 1.13rem;
+}
+.item.dragging {
+  opacity: 0.6;
+}
+.item.dragging :where(.details, i) {
+  opacity: 0;
+}
+
+.drag-contents {
+  border: 1px solid black;
+  width: 350px;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.itemBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #66666696;
+  width: 100px;
+  height: 100px;
+}
+
+.emoji1,
+.emoji2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  background-color: rgb(234, 234, 234);
+  cursor: pointer;
+}

@@ -1,0 +1,60 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Drag & Drop</title>
+  </head>
+  <body>
+    <ul class="sortable-list">
+      <li class="item" draggable="true">
+        <div class="details">
+          <span>Category 1</span>
+        </div>
+        <i class="uil uil-draggabledots"></i>
+      </li>
+      <li class="item" draggable="true">
+        <div class="details">
+          <span>Category 2</span>
+        </div>
+        <i class="uil uil-draggabledots"></i>
+      </li>
+      <li class="item" draggable="true">
+        <div class="details">
+          <span>Category 3</span>
+        </div>
+        <i class="uil uil-draggabledots"></i>
+      </li>
+      <li class="item" draggable="true">
+        <div class="details">
+          <span>Category 4</span>
+        </div>
+        <i class="uil uil-draggabledots"></i>
+      </li>
+    </ul>
+    <div class="drag-contents">
+      <div class="itemBox">
+        <div class="emoji1" draggable="true">😍</div>
+      </div>
+      <div class="itemBox">
+        <div class="emoji2" draggable="true"></div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    function showText(e) {
+      if (document.querySelectorAll("p").length === 10) {
+        document.querySelectorAll("p").forEach((e) => e.remove());
+      }
+      const p = document.createElement("p");
+      p.textContent = e;
+      document.body.append(p);
+    }
+  </script>
+  <script src="./main.js"></script>
+</html>
