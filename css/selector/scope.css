@@ -1,0 +1,82 @@
+/** @format */
+
+/* @scope (.article-body) to (figure) {
+  div {
+    width: 100px;
+    height: 50px;
+    border: 5px solid black;
+    background-color: goldenrod;
+  }
+}
+ */
+
+/*  article-body 밑에 있는 모든 div 
+@scope (.article-body) {
+  div {
+    border: 5px solid black;
+    background-color: goldenrod;
+  }
+} */
+
+/*   article-body와 figure 사이의 div만
+@scope (.article-body) to (figure) {
+  div {
+    border: 5px solid black;
+    background-color: goldenrod;
+  }
+}
+ */
+
+/*  feature 영역 전체에 해당
+@scope (.feature) {
+  :scope {
+    background: rebeccapurple;
+    color: antiquewhite;
+    font-family: sans-serif;
+  }
+}
+ */
+
+/* @scope (.article-hero, .article-body) to (figure) {
+  div {
+    border: 5px solid black;
+    background-color: goldenrod;
+  }
+}
+ */
+
+/* scope before */
+/* .light-theme {
+  background: #ccc;
+}
+
+.dark-theme {
+  background: #333;
+}
+
+.light-theme p {
+  color: black;
+}
+
+.dark-theme p {
+  color: white;
+}
+ */
+
+@scope (.light-theme) {
+  :scope {
+    background: #ccc;
+  }
+  p {
+    color: black;
+  }
+}
+
+@scope (.dark-theme) {
+  :scope {
+    background: #333;
+  }
+  p {
+    color: white;
+  }
+}
