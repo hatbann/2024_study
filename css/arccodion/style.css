@@ -1,0 +1,20 @@
+/** @format */
+
+.collapsible {
+  border: none;
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+}
+.collapsible:hover {
+  background-color: gray;
+  color: white;
+}
+
+.content {
+  margin: 0;
+  padding: 0 18px;
+  max-height: 1px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
