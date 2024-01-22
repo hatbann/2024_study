@@ -1,0 +1,14 @@
+/** @format */
+
+.login_btn {
+  width: 100px;
+  height: 50px;
+  background-color: rgb(145, 145, 145);
+  color: white;
+  margin-top: 10px;
+  border-radius: 5px;
+
+  &.isvalid {
+    background-color: rgb(147, 147, 255);
+  }
+}
