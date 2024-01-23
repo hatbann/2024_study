@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- @format -->
 
-## Getting Started
+## Xstate
 
-First, run the development server:
+-> 자바스크립트로 만든 유한 상태 기계
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+<br>
+
+설치
+
+```
+npm i xstate @xstate/react
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Machine 정의
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- createMachine 을 통해 생성
+- id : machine을 식별할 수 있는 고유 Id
+- initial : 초기 상태가 필요할 경우 정의
+- states : 가질 수 있는 상태 정의(중첩 가능)
 
-## Learn More
+### Event
 
-To learn more about Next.js, take a look at the following resources:
+- on : 실행 될 수 있는 이벤트 정의
+- target : 이벤트 실행 후 전이되는 상태
+- action : 이벤트 발생시 실행되는 함수 정의
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Context
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- machine에 정의된 양적 데이터(문자열, 숫자 , 개체 등)
 
-## Deploy on Vercel
+### State Nodes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- type
+  - atomic : 자식 states X
+  - compound : 하나 이상의 자식 states, inital state 존재
+  - parallel : 하나 이상의 자식 states, inital state 존재 X
+  - final : 가장 끝의 leaf node
+  - history : 직전의 상태 기억(shallow, deep 가능)

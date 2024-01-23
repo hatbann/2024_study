@@ -1,0 +1,45 @@
+/** @format */
+
+.powerBtn {
+  width: 100px;
+  height: 40px;
+  margin: 10px;
+  background-color: gray;
+  color: white;
+  border-radius: 5px;
+  font-weight: 700;
+
+  &.activate {
+    background-color: rgb(81, 139, 255);
+    color: white;
+  }
+}
+
+.bulbContainer {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(197, 197, 197);
+  margin-left: 10px;
+}
+
+.changeContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-left: 10px;
+
+  p {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+}
+
+.changeBtn {
+  background-color: rgb(237, 237, 237);
+  color: rgb(71, 71, 71);
+  width: 80px;
+  &.activate {
+    background-color: rgb(255, 209, 154);
+  }
+}
