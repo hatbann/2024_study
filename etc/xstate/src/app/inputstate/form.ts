@@ -6,6 +6,8 @@ import { useForm } from "react-hook-form";
 interface LoginType {
   email: string;
   password: string;
+  name: string;
+  age: number;
 }
 
 const validation = {
@@ -20,6 +22,8 @@ export const useLoginForm = () => {
     defaultValues: {
       email: "",
       password: "",
+      name: "",
+      age: 0,
     },
   });
 
@@ -32,6 +36,18 @@ export const useLoginForm = () => {
       },
     }),
     password: f.register("password", {
+      required: true,
+      onChange: () => {
+        const value = f.getValues("password");
+        if (f.getValues("password").length > 20) {
+          f.setValue("password", value.slice(0, 20));
+        }
+      },
+    }),
+    name: f.register("name", {
+      required: true,
+    }),
+    age: f.register("age", {
       required: true,
     }),
   };
